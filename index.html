@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Dr. Brajesh Kumar | Associate Professor - IIT Kharagpur Alumnus</title>
+    <!-- Google Fonts + Font Awesome 6 (Free) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #f8fafc;
+            color: #0f172a;
+            line-height: 1.5;
+            scroll-behavior: smooth;
+        }
+
+        /* custom container */
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* sticky nav */
+        .navbar {
+            background: rgba(255,255,255,0.96);
+            backdrop-filter: blur(8px);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.02), 0 1px 2px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .nav-container {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0.9rem 0;
+        }
+
+        .logo h2 {
+            font-size: 1.55rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #1e3c72, #2b5876);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            letter-spacing: -0.3px;
+        }
+        .logo span {
+            font-size: 0.85rem;
+            font-weight: 400;
+            display: block;
+            color: #334155;
+            background: none;
+            -webkit-background-clip: unset;
+            background-clip: unset;
+            color: #475569;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 1.8rem;
+            flex-wrap: wrap;
+        }
+        .nav-links a {
+            text-decoration: none;
+            font-weight: 500;
+            color: #1e293b;
+            transition: 0.2s;
+            font-size: 0.95rem;
+        }
+        .nav-links a:hover {
+            color: #2563eb;
+        }
+
+        /* hero */
+        .hero {
+            background: linear-gradient(130deg, #eef2ff 0%, #ffffff 100%);
+            border-radius: 2rem;
+            margin: 2rem 0 2rem 0;
+            padding: 2.5rem 2rem;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.02);
+            border: 1px solid #e0e7ff;
+        }
+        .hero-grid {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            gap: 2rem;
+        }
+        .hero-text {
+            flex: 2;
+        }
+        .hero-text h1 {
+            font-size: 2.8rem;
+            font-weight: 800;
+            line-height: 1.2;
+            background: linear-gradient(120deg, #0f2b3d, #1e4a76);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+        .badge {
+            display: inline-block;
+            background: #dbeafe;
+            color: #1e40af;
+            border-radius: 40px;
+            padding: 0.2rem 0.9rem;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin: 0.75rem 0 0.5rem 0;
+        }
+        .hero-stats {
+            display: flex;
+            gap: 1.5rem;
+            margin-top: 1.2rem;
+            flex-wrap: wrap;
+        }
+        .stat {
+            background: white;
+            padding: 0.4rem 1rem;
+            border-radius: 40px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+        .hero-icon {
+            flex: 1;
+            text-align: center;
+        }
+        .hero-icon i {
+            font-size: 7rem;
+            color: #2c6e9e;
+            opacity: 0.7;
+        }
+
+        /* cards */
+        .section-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin: 2rem 0 1.5rem 0;
+            border-left: 5px solid #2563eb;
+            padding-left: 1rem;
+        }
+        .card {
+            background: white;
+            border-radius: 1.5rem;
+            padding: 1.5rem;
+            margin-bottom: 1.8rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.03), 0 1px 2px rgba(0,0,0,0.05);
+            transition: all 0.2s ease;
+            border: 1px solid #eef2f6;
+        }
+        .card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 20px 25px -12px rgba(0,0,0,0.1);
+            border-color: #cbdff2;
+        }
+        .exp-header {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-bottom: 0.8rem;
+        }
+        .exp-title {
+            font-weight: 800;
+            font-size: 1.25rem;
+        }
+        .exp-date {
+            color: #2c6e9e;
+            font-weight: 500;
+        }
+        .course-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.6rem;
+            margin: 1rem 0 0.5rem;
+        }
+        .course-tag {
+            background: #eef2ff;
+            border-radius: 30px;
+            padding: 0.2rem 0.9rem;
+            font-size: 0.75rem;
+            font-weight: 500;
+        }
+        .pub-list, .patent-list {
+            list-style: none;
+        }
+        .pub-list li, .patent-list li {
+            margin-bottom: 0.9rem;
+            border-bottom: 1px dashed #e9edf2;
+            padding-bottom: 0.7rem;
+        }
+        .skills-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+            margin-top: 0.5rem;
+        }
+        .skill-badge {
+            background: #f1f5f9;
+            padding: 0.4rem 1rem;
+            border-radius: 40px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+        .accordion-toggle {
+            background: #f1f5f9;
+            border: none;
+            width: 100%;
+            text-align: left;
+            font-weight: 700;
+            padding: 1rem;
+            border-radius: 2rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: 0.2s;
+            margin: 1rem 0 0.5rem;
+        }
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease-out;
+            background: #ffffff;
+            border-radius: 1rem;
+        }
+        .accordion-content.show {
+            max-height: 1800px;
+            transition: max-height 0.6s ease-in-out;
+        }
+        .conf-item {
+            padding: 0.7rem 0;
+            border-bottom: 1px solid #f0f2f5;
+            font-size: 0.85rem;
+        }
+        footer {
+            background: #0f172a;
+            color: #cbd5e1;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+            border-radius: 2rem 2rem 0 0;
+        }
+        @media (max-width: 768px) {
+            .container { padding: 0 18px; }
+            .hero-text h1 { font-size: 2rem; }
+            .nav-links { gap: 1rem; margin-top: 0.5rem; }
+            .nav-container { flex-direction: column; align-items: flex-start; }
+            .section-title { font-size: 1.5rem; }
+            .exp-header { flex-direction: column; }
+        }
+        .btn-backtop {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            background: #2563eb;
+            color: white;
+            border-radius: 60px;
+            padding: 0.6rem 1rem;
+            cursor: pointer;
+            box-shadow: 0 6px 14px rgba(0,0,0,0.1);
+            z-index: 99;
+            border: none;
+            font-size: 0.9rem;
+        }
+        i.icon-mr {
+            margin-right: 6px;
+        }
+        a {
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="container nav-container">
+        <div class="logo">
+            <h2>Dr. Brajesh Kumar <i class="fas fa-leaf" style="font-size:1.3rem; color:#2b6e3c;"></i></h2>
+            <span>Associate Professor (VIIT Visakhapatnam)<br>IIT Kharagpur Alumnus</span>
+        </div>
+        <div class="nav-links">
+            <a href="#about">About</a>
+            <a href="#experience">Experience</a>
+            <a href="#research">Research</a>
+            <a href="#projects">Projects</a>
+            <a href="#skills">Skills</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </div>
+</nav>
+
+<main class="container">
+    <!-- Hero Section -->
+    <div class="hero" id="about">
+        <div class="hero-grid">
+            <div class="hero-text">
+                <div class="badge"><i class="fas fa-chalkboard-user"></i> Interdisciplinary Faculty (IT & Mechanical)</div>
+                <h1>Brajesh Kumar<br>PhD, IIT Kharagpur</h1>
+                <p style="margin-top: 1rem; font-size: 1.05rem;">Associate Professor with 10+ years of experience, specializing in <strong>Green Engineering, Cloud Computing, Sustainability, Thermal Energy Storage, and AI-Integration</strong>. Consistently achieving student pass rates 87%–99% and mentoring next-gen innovators.</p>
+                <div class="hero-stats">
+                    <span class="stat"><i class="fas fa-graduation-cap"></i> PhD (IIT KGP) 2021</span>
+                    <span class="stat"><i class="fas fa-chart-line"></i> Pass % up to 99%</span>
+                    <span class="stat"><i class="fas fa-file-alt"></i> 4 Journals + 2 Patents</span>
+                </div>
+            </div>
+            <div class="hero-icon">
+                <i class="fas fa-solar-panel"></i>
+                <i class="fas fa-microchip" style="font-size: 4rem; display: block; margin-top: 8px;"></i>
+            </div>
+        </div>
+    </div>
+
+    <!-- Professional Experience -->
+    <section id="experience">
+        <h2 class="section-title"><i class="fas fa-briefcase icon-mr"></i> Professional Experience</h2>
+        
+        <div class="card">
+            <div class="exp-header"><span class="exp-title">Associate Professor</span><span class="exp-date">Dec 2023 – Present</span></div>
+            <div><i>Dept. of IT & Mechanical Engg., Vignan's Institute of IT, Visakhapatnam</i></div>
+            <div class="course-list">
+                <span class="course-tag">Green Buildings (VR23)</span>
+                <span class="course-tag">Green Engineering Systems</span>
+                <span class="course-tag">Operating System (97.3%)</span>
+                <span class="course-tag">Cloud Computing (98.5%)</span>
+                <span class="course-tag">Software Engg (97.1%)</span>
+                <span class="course-tag">Operations Research (98.7%)</span>
+            </div>
+            <ul style="margin-top: 12px; margin-left: 1.2rem;">
+                <li>Mentored AI & sustainability projects; organized workshop “Leveraging Cloud and AI for Digital Transformation”.</li>
+                <li>Innovative curriculum design integrating renewable energy with IT frameworks.</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <div class="exp-header"><span class="exp-title">Assistant Professor</span><span class="exp-date">Aug 2021 – Dec 2023</span></div>
+            <div><i>Dept. of Mechanical Engg., Vignan's Institute of IT</i></div>
+            <div class="course-list">
+                <span class="course-tag">Green Engg Systems (98.1% / 98.6%)</span>
+                <span class="course-tag">Applied Thermodynamics (87.6%)</span>
+            </div>
+            <ul><li>Curriculum development for Green Engineering Systems (VR21). Supervised renewable energy & sustainable engineering projects.</li></ul>
+        </div>
+
+        <div class="card">
+            <div class="exp-header"><span class="exp-title">Teaching Assistant / Research Fellow</span><span class="exp-date">IIT Kharagpur (2010-2019)</span></div>
+            <ul><li>PhD research: parabolic dish collectors, PCM & nanofluid heat transfer; delivered lectures & Energy Systems Lab.</li>
+            <li>JRF/SRF: CFD analysis, thermal simulation; project reporting to CSIR, India.</li></ul>
+        </div>
+    </section>
+
+    <!-- Educational Background -->
+    <h2 class="section-title"><i class="fas fa-university icon-mr"></i> Education</h2>
+    <div class="card">
+        <p><strong>🎓 PhD (Energy Science & Engineering)</strong> – IIT Kharagpur (2021)<br> 
+        <em>Dissertation:</em> "An Optimal Design of a Parabolic Dish Collector and Energy Storage with Enhanced Heat Transfer Study using Nanofluid"</p>
+        <p><strong>🎓 MS (Mechanical Engineering)</strong> – IIT Kharagpur (2014) | GPA: 9.3/10</p>
+        <p><strong>🎓 BE (Mechanical Engineering)</strong> – RTM Nagpur University (2009) | 71.56%</p>
+    </div>
+
+    <!-- Seed Project + Key Projects Mentored -->
+    <h2 class="section-title"><i class="fas fa-microscope icon-mr"></i> Funded Projects & Mentorship</h2>
+    <div class="card">
+        <h3><i class="fas fa-seedling"></i> Seed Project (VIIT R&D)</h3>
+        <p><strong>Optimization of energy efficiency of Solar PV system (no tracking & single-axis tracking)</strong><br>Funding: ₹1,50,000 | Duration: 1 year (Grant date: 26/9/2021) | Co-PI: Dr. B Sateesh</p>
+    </div>
+    <div class="card">
+        <h3><i class="fas fa-users"></i> Key Projects Mentored</h3>
+        <ul style="columns: 1; list-style-type: none;">
+            <li>🤖 <strong>ML-Driven Agricultural Commerce Platform</strong> – price prediction, real-time matching.</li>
+            <li>🌬️ <strong>Vertical Axis Wind Turbine</strong> – small-scale fabrication.</li>
+            <li>🚲 <strong>Solar Bicycle</strong> – eco-friendly transport prototype.</li>
+            <li>🌫️ <strong>Air Quality Enhancement System</strong> – MQ135 + nanomaterials.</li>
+            <li>⚡ <strong>Biogas Plant Analysis</strong> – efficiency innovations.</li>
+            <li>💧 <strong>Solar Still Technologies</strong> – cost-effective water purification.</li>
+            <li>📐 <strong>Slope Angle Optimization (Visakhapatnam)</strong> – SAM software based PV efficiency.</li>
+        </ul>
+    </div>
+
+    <!-- Research Contributions: Journals, Books, Patents -->
+    <section id="research">
+        <h2 class="section-title"><i class="fas fa-book-open"></i> Research Output</h2>
+        <div class="card">
+            <h3>📄 Journal Publications</h3>
+            <ul class="pub-list">
+                <li><strong>B. Kumar*</strong>, M. K. Das and J. N. Roy. <em>Heat energy storage using parabolic dish collector in LiNO3 phase change material.</em> Journal of the Indian Chemical Society, Vol. 97(10a), 1-5, 2020.</li>
+                <li><strong>B. Kumar*</strong>, M. K. Das and J. N. Roy. <em>Energy storage using NaOH phase change material for solar thermal application at constant heat flux.</em> IOP CS: Materials Science and Engineering, Vol. 1168(012015), 1-7, 2021.</li>
+                <li><strong>B. Kumar*</strong>, J. N. Roy and M. K. Das. <em>Numerical analysis of flat receiver placement of parabolic dish collector.</em> An International Journal of Engg, Sciences, Humanities & Management, Vol. 12(1), 37-42, 2022.</li>
+                <li><strong>B. Kumar*</strong>, M. K. Das and J. N. Roy. <em>Synthesis of sub-20 nm nanoparticles of Zinc Oxide for heat transfer applications.</em> An International Journal... Vol. 12(1), 43-47, 2022.</li>
+            </ul>
+        </div>
+        <div class="card">
+            <h3>📘 Book Chapters</h3>
+            <ul><li><strong>B. Kumar*</strong>, M. K. Das, J. N. Roy. <em>Design and Storage of Solar Thermal Energy</em>, Sustainable Energy Production Technologies. Springer Nature Press, 225-243, 2022.</li>
+            <li><strong>B. Kumar*</strong>, M. S. Pervez, A. M. Achari. <em>Heat Energy Storage in LiBr and Phase Change Material using Solar Parabolic Dish Collector</em>, Recent Advances in Science, Engg & Tech. CRC Press, 640, 2024.</li></ul>
+        </div>
+        <div class="card">
+            <h3>⚙️ Patent Publications</h3>
+            <ul class="patent-list">
+                <li><i class="fas fa-microchip"></i> <strong>Sensor-Based Solar PV Power Output System with Graphical Interface and Cloud Support</strong> – Application No. 202541006367A (Published 31 Jan 2025).</li>
+                <li><i class="fas fa-wind"></i> <strong>Advanced Air Quality Monitoring and Control Using Nano Catalytic Technology</strong> – Application No. 202541005817A (Published 09 May 2025).</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Conference Presentations with Accordion (Interactive) -->
+    <h2 class="section-title"><i class="fas fa-chalkboard"></i> Conference Presentations & Awards</h2>
+    <div class="card">
+        <button class="accordion-toggle" id="confAccordBtn">📢 Show / Hide Full Conference List (8+ papers, 3 Best Paper Awards) <i class="fas fa-chevron-down"></i></button>
+        <div id="confList" class="accordion-content">
+            <div class="conf-item">🏆 <strong>M S Pervez, K S Zakiuddin, B. Kumar*</strong>. Optimization of Sustainable Human Power Rice Mill. CHEMCONFLUX2022, Allahabad (Best Paper).</div>
+            <div class="conf-item"><strong>B. Kumar*, M. K. Das, J. N. Roy</strong>. Energy storage using NaOH PCM. CEME2020, Noida, Feb 2021.</div>
+            <div class="conf-item"><strong>B. Kumar*, J. N. Roy, M. K. Das</strong>. Numerical Analysis of Flat Receiver Placement. ICONRER-2021, Jaipur.</div>
+            <div class="conf-item"><strong>B. Kumar*, M. K. Das, J. N. Roy</strong>. Synthesis of Sub-20 nm ZnO Nanoparticles. ICONRER-2021.</div>
+            <div class="conf-item"><strong>B. Kumar*, J. N. Roy, M. K. Das</strong>. Energy analysis of LiNO3 PCM using numerical simulation. ICONRER-2021.</div>
+            <div class="conf-item">🏆 <strong>B. Kumar*, M. K. Das, J. N. Roy</strong>. Heat Energy Storage using Parabolic Dish Collector in LiNO3 PCM. CHEMCONFLUX20, Feb 2020 (Best Paper).</div>
+            <div class="conf-item">🏆 <strong>B. Kumar*, J. N. Roy, M. K. Das</strong>. Latent Heat Energy Storage for Medium & High Temperature using Solar Parabolic Dish Collector. ICAMEN 2020 (Best Paper).</div>
+            <div class="conf-item"><strong>B. Kumar*, J. N. Roy, M. K. Das</strong>. Solar Energy Harvesting Using Increasing Heat Transfer Coefficient. ICMTech 2016, Delhi.</div>
+        </div>
+    </div>
+
+    <!-- Certifications & Training + Skills -->
+    <div style="display: flex; flex-wrap: wrap; gap: 1.8rem; margin: 1rem 0;">
+        <div style="flex: 1; min-width: 240px;" class="card">
+            <h3><i class="fas fa-certificate"></i> Certifications & Training</h3>
+            <ul style="margin-left: 1rem;">
+                <li>EdX: Hardware & OS, Cybersecurity Roles, Google AI For Everyone</li>
+                <li>FDPs: Smart Use of Renewable Energy, NEP 2020 Orientation</li>
+                <li>GIAN: Fundamentals of Photovoltaics, Sustainable Production Management, Urban Water Management</li>
+                <li>Workshops: Python for Engineers, Advanced Material Science for Renewables</li>
+            </ul>
+        </div>
+        <div style="flex: 1; min-width: 240px;" class="card" id="skills">
+            <h3><i class="fas fa-code"></i> Technical Skills</h3>
+            <div class="skills-grid">
+                <span class="skill-badge">C/C++</span><span class="skill-badge">Python</span><span class="skill-badge">ANSYS Fluent</span>
+                <span class="skill-badge">COMSOL</span><span class="skill-badge">MATLAB</span><span class="skill-badge">OpenFOAM</span>
+                <span class="skill-badge">AutoCAD/CATIA</span><span class="skill-badge">PVsyst</span><span class="skill-badge">SAM (System Advisor Model)</span>
+            </div>
+            <h3 style="margin-top: 1rem;"><i class="fas fa-brain"></i> Core Competencies</h3>
+            <p>Green Building Systems · Cloud Computing · CFD & Thermal Simulation · AI in Sustainability · Nanomaterials · Energy Storage</p>
+        </div>
+    </div>
+
+    <!-- Awards & Achievements -->
+    <h2 class="section-title"><i class="fas fa-trophy"></i> Awards & Honors</h2>
+    <div class="card">
+        <ul>
+            <li>🏅 <strong>Best Paper Awards</strong> – CHEMCONFLUX2020, ICAMEN-2020, CHEMCONFLUX2022 (International Conferences).</li>
+            <li>🏅 Successfully mentored student teams for national competitions in renewable energy & sustainability.</li>
+            <li>🏅 Consistently high student pass rates (97%+ in core subjects) and excellence in curriculum innovation.</li>
+        </ul>
+    </div>
+
+    <!-- Additional Highlights: Student Mentoring, Workshops -->
+    <div class="card">
+        <h3><i class="fas fa-chalkboard"></i> Teaching & Mentoring Highlights</h3>
+        <p>✔️ Guided undergraduate/graduate projects in AI-driven sustainability, renewable energy systems, and smart agriculture.<br>
+        ✔️ Organized workshops: “Leveraging Cloud and AI for Digital Transformation”, PV systems, energy storage seminars.<br>
+        ✔️ Developed Green Engineering Systems (VR21) curriculum, integrated real-world case studies.</p>
+    </div>
+
+    <!-- Footer / Contact -->
+    <footer id="contact">
+    <i class="fas fa-envelope"></i> 
+    <a href="mailto:brajeshkumar998@gmail.com">brajeshkumar998@gmail.com</a> &nbsp;|&nbsp;
+    
+    <i class="fas fa-phone"></i> 
+    <a href="tel:+917679554218">+91 7679554218</a> &nbsp;|&nbsp;
+    
+    <i class="fab fa-linkedin"></i> 
+    <a href="https://www.linkedin.com/in/brajesh-kumar-061a2b27" target="_blank">
+        LinkedIn
+    </a> &nbsp;|&nbsp;
+    
+    <i class="fab fa-github"></i> 
+    <a href="https://github.com/brajeshkumar998" target="_blank">
+        GitHub
+    </a> &nbsp;|&nbsp;
+    
+    <i class="fas fa-globe"></i> 
+    VIIT, Visakhapatnam, India <br>
+
+    <span style="font-size: 0.75rem;">© Dr. Brajesh Kumar</span>
+    </footer>
+</main>
+
+<button class="btn-backtop" id="backToTopBtn"><i class="fas fa-arrow-up"></i> Top</button>
+
+<script>
+    // Accordion Interactive for Conference List
+    const accordBtn = document.getElementById('confAccordBtn');
+    const confDiv = document.getElementById('confList');
+    if (accordBtn && confDiv) {
+        accordBtn.addEventListener('click', () => {
+            confDiv.classList.toggle('show');
+            const icon = accordBtn.querySelector('i');
+            if (confDiv.classList.contains('show')) {
+                icon.classList.remove('fa-chevron-down');
+                icon.classList.add('fa-chevron-up');
+            } else {
+                icon.classList.remove('fa-chevron-up');
+                icon.classList.add('fa-chevron-down');
+            }
+        });
+        // default collapsed to keep clean (but shows first element: interactive)
+        confDiv.classList.remove('show');
+    }
+
+    // Back to top button
+    const topBtn = document.getElementById('backToTopBtn');
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 400) {
+            topBtn.style.display = 'flex';
+        } else {
+            topBtn.style.display = 'none';
+        }
+    });
+    topBtn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+    topBtn.style.display = 'none';
+    topBtn.style.alignItems = 'center';
+    topBtn.style.gap = '6px';
+    topBtn.style.display = 'none'; // hidden initially
+
+    // additional hover & responsive smoothness
+    const allCards = document.querySelectorAll('.card');
+    allCards.forEach(card => {
+        card.addEventListener('mouseenter', () => {
+            card.style.transition = 'all 0.2s';
+        });
+    });
+</script>
+</body>
+</html>
